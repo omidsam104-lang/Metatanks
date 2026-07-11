@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<title>🚀 اخبار متاتانک</title>
+<style>
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:tahoma,sans-serif;
+
+}
+
+body{
+
+background:
+
+radial-gradient(
+
+circle at top,
+
+#17356a 0%,
+
+#0b1d3a 35%,
+
+#050d1f 70%,
+
+#02050d 100%
+
+);
+
+color:#fff;
+
+overflow-x:hidden;
+
+min-height:100vh;
+
+padding:16px;
+
+position:relative;
+
+}
+
+#space{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+z-index:-100;
+
+}
+
+.container{
+
+max-width:920px;
+
+margin:auto;
+
+}
+
+.header{
+
+position:relative;
+
+overflow:hidden;
+
+padding:35px 20px;
+
+margin:18px 0 25px;
+
+border-radius:26px;
+
+background:
+
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(16px);
+
+border:
+
+1px solid rgba(0,255,255,.18);
+
+box-shadow:
+
+0 0 35px rgba(0,180,255,.20);
+
+text-align:center;
+
+}
+
+.header h1{
+
+font-size:38px;
+
+color:#8ef4ff;
+
+text-shadow:
+
+0 0 12px #00d9ff,
+
+0 0 28px #00d9ff;
+
+position:relative;
+
+z-index:5;
+
+}
+
+.header p{
+
+margin-top:10px;
+
+font-size:15px;
+
+color:#d8f6ff;
+
+position:relative;
+
+z-index:5;
+
+}
+  .radar{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+overflow:hidden;
+
+border:2px solid rgba(0,255,255,.22);
+
+box-shadow:
+
+0 0 35px rgba(0,255,255,.20),
+
+inset 0 0 25px rgba(0,255,255,.15);
+
+z-index:1;
+
+}
+
+.radar::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+border-radius:50%;
+
+background:
+
+repeating-radial-gradient(
+
+circle,
+
+transparent 0,
+
+transparent 27px,
+
+rgba(0,255,255,.08) 28px,
+
+transparent 29px
+
+);
+
+}
+
+.radar::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:10px;
+
+height:10px;
+
+transform:translate(-50%,-50%);
+
+border-radius:50%;
+
+background:#00ffff;
+
+box-shadow:
+
+0 0 15px cyan,
+
+0 0 30px cyan,
+
+0 0 45px cyan;
+
+}
+
+.scan{
+
+position:absolute;
+
+left:50%;
+
+top:50%;
+
+width:50%;
+
+height:3px;
+
+transform-origin:left center;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+rgba(0,255,255,1),
+
+rgba(0,255,255,.6),
+
+rgba(0,255,255,0)
+
+);
+
+animation:scanRotate 4s linear infinite;
+
+z-index:3;
+
+}
+
+.vline{
+
+position:absolute;
+
+left:50%;
+
+top:0;
+
+width:1px;
+
+height:100%;
+
+background:rgba(0,255,255,.18);
+
+transform:translateX(-50%);
+
+}
+
+.hline{
+
+position:absolute;
+
+left:0;
+
+top:50%;
+
+width:100%;
+
+height:1px;
+
+background:rgba(0,255,255,.18);
+
+transform:translateY(-50%);
+
+}
+
+@keyframes scanRotate{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+  }
+  .glass{
+
+background:
+
+rgba(255,255,255,.08);
+
+backdrop-filter:blur(16px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:22px;
+
+padding:18px;
+
+margin:18px 0;
+
+box-shadow:
+
+0 0 25px rgba(0,200,255,.15);
+
+transition:.35s;
+
+}
+
+.glass:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 0 35px rgba(0,220,255,.35);
+
+}
+
+.title{
+
+font-size:24px;
+
+font-weight:bold;
+
+text-align:center;
+
+margin-bottom:18px;
+
+color:#82f4ff;
+
+text-shadow:
+
+0 0 12px #00d9ff;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:16px;
+
+}
+
+.league-grid{
+ display:grid;
+ grid-template-columns:.9fr 1.1fr;
+ gap:16px;
+}
+.league-grid td{padding:14px 10px;}
+
+.card{
+
+background:
+
+rgba(255,255,255,.05);
+
+border-radius:18px;
+
+padding:16px;
+
+border:1px solid rgba(255,255,255,.12);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+background:
+
+rgba(255,255,255,.10);
+
+transform:scale(1.02);
+
+}
+
+.channel-btn{
+
+display:block;
+
+text-decoration:none;
+
+text-align:center;
+
+padding:15px;
+
+border-radius:15px;
+
+font-size:18px;
+
+font-weight:bold;
+
+color:#fff;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+rgba(0,170,255,.35),
+
+rgba(0,255,200,.20)
+
+);
+
+border:1px solid rgba(0,255,255,.35);
+
+transition:.3s;
+
+}
+
+.channel-btn:hover{
+
+box-shadow:
+
+0 0 20px rgba(0,255,255,.45);
+
+transform:scale(1.03);
+
+}
+
+.timer{
+
+font-size:28px;
+
+font-weight:bold;
+
+text-align:center;
+
+color:#ffd54f;
+
+}
+
+.mode{
+
+font-size:30px;
+
+font-weight:bold;
+
+text-align:center;
+
+color:#00ff99;
+
+}
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+}
+
+td{
+
+padding:10px;
+
+border-bottom:1px solid rgba(255,255,255,.10);
+
+}
+
+@media(max-width:700px){
+
+.grid{
+
+grid-template-columns:1fr 1fr;
+
+gap:10px;
+
+}
+
+.header h1{
+
+font-size:30px;
+
+}
+
+.title{
+
+font-size:20px;
+
+}
+
+}
+
+
+.league-table{width:100%;border-collapse:collapse;}
+.league-table td{padding:10px;border-bottom:1px solid rgba(255,255,255,.10);font-size:16px;}
+.league-table tr:last-child td{border-bottom:none;}
+
+
+#metaBotBtn{position:fixed;bottom:20px;left:20px;width:60px;height:60px;border-radius:50%;border:none;background:#00bcd4;color:#fff;font-size:28px;z-index:9999}
+#metaBotBox{display:none;position:fixed;bottom:90px;left:20px;width:320px;max-width:92vw;background:#0b1d3a;color:#fff;border:1px solid #00d9ff;border-radius:14px;padding:10px;z-index:9999}
+#botMessages{height:200px;overflow:auto;font-size:14px;margin-bottom:8px}
+#botInput{width:100%;padding:8px}
+@media(max-width:700px){.grid{grid-template-columns:1fr 1fr!important;gap:10px;}.league-grid{grid-template-columns:1fr 1fr!important;gap:10px;}#metaBotBox{left:4vw;bottom:85px;}}
+
+#botQuick{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}#botQuick button{background:#123d6b;color:#fff;border:1px solid #00d9ff;border-radius:12px;padding:4px 8px;font-size:12px}</style>
+</head>
+<body>
+<canvas id="space"></canvas>
+<div class="container">
+<div class="header">
+<div class="radar">
+<div class="vline"></div>
+<div class="hline"></div>
+<div class="scan"></div>
+</div>
+<h1>
+
+🚀 اخبار متاتانک
+
+</h1>
+<p>
+
+مرجع فارسی اخبار بازی MetaTank
+
+</p>
+</div>
+<div class="glass">
+<div class="title">
+
+📢 کانال‌ها
+
+</div>
+<div class="grid">
+<div class="card">
+<a class="channel-btn" href="https://rubika.ir/mtatank" target="_blank">
+
+🚀 کانال ما
+
+</a>
+<br/>
+<p align="center">
+
+آخرین اخبار متاتانک
+
+</p>
+</div>
+<div class="card">
+<a class="channel-btn" href="https://rubika.ir/MTCommunity" target="_blank">
+
+👥 کامیونیتی
+
+</a>
+<br/>
+<p align="center">
+
+گفتگو، آموزش و مسابقات
+
+</p>
+</div>
+<div class="card">
+<a class="channel-btn" href="https://rubika.ir/metatank" target="_blank">
+
+🛡️ کانال رسمی
+
+</a>
+<br/>
+<p align="center">
+
+اخبار رسمی بازی
+
+</p>
+</div>
+<div class="card">
+<h3 align="center">
+
+💬 درباره سایت
+
+</h3>
+<br/>
+<p align="center">
+
+آخرین اخبار،
+
+گیم‌مودها،
+
+لیگ‌ها
+
+و مأموریت‌های روزانه
+
+در یک صفحه.
+
+</p>
+</div>
+</div>
+</div>
+<div class="glass">
+<div class="title">
+
+🎮 گیم‌مودها
+
+</div>
+<div class="grid">
+<div class="card">
+<h3 align="center">
+
+🎯 گیم‌مود فعلی
+
+</h3>
+<br/>
+<div class="mode" id="currentMode">
+
+...
+
+</div>
+<br/><br/>
+<h3 align="center">
+
+⏳ تا گیم‌مود بعدی
+
+</h3>
+<br/>
+<div class="timer" id="modeTimer">
+
+00:00:00
+
+</div>
+<br/><br/>
+<h3 align="center">
+
+➡️ گیم‌مود بعدی
+
+</h3>
+<br/>
+<div class="mode" id="nextMode">
+
+...
+
+</div>
+</div>
+<div class="card">
+<h3 align="center">
+
+📋 برنامه گیم‌مودها
+
+</h3>
+<br/>
+<table>
+<tr><td>01:30</td><td>۵ نفره</td></tr>
+<tr><td>03:30</td><td>2v2</td></tr>
+<tr><td>05:30</td><td>۳ نفره</td></tr>
+<tr><td>07:30</td><td>3v3</td></tr>
+<tr><td>09:30</td><td>۵ نفره</td></tr>
+<tr><td>11:30</td><td>2v2</td></tr>
+<tr><td>13:30</td><td>۳ نفره</td></tr>
+<tr><td>15:30</td><td>3v3</td></tr>
+<tr><td>17:30</td><td>۵ نفره</td></tr>
+<tr><td>19:30</td><td>2v2</td></tr>
+<tr><td>21:30</td><td>۳ نفره</td></tr>
+<tr><td>23:30</td><td>3v3</td></tr>
+</table>
+</div>
+</div>
+</div>
+<script>
+
+const modes=[
+
+{time:"01:30",name:"۵ نفره"},
+
+{time:"03:30",name:"2v2"},
+
+{time:"05:30",name:"۳ نفره"},
+
+{time:"07:30",name:"3v3"},
+
+{time:"09:30",name:"۵ نفره"},
+
+{time:"11:30",name:"2v2"},
+
+{time:"13:30",name:"۳ نفره"},
+
+{time:"15:30",name:"3v3"},
+
+{time:"17:30",name:"۵ نفره"},
+
+{time:"19:30",name:"2v2"},
+
+{time:"21:30",name:"۳ نفره"},
+
+{time:"23:30",name:"3v3"}
+
+];
+
+function updateModes(){
+
+const now=new Date();
+
+let current=0;
+
+let next=0;
+
+let nextDate=null;
+
+for(let i=0;i<modes.length;i++){
+
+const [h,m]=modes[i].time.split(":").map(Number);
+
+const d=new Date();
+
+d.setHours(h,m,0,0);
+
+if(now>=d){
+
+current=i;
+
+}else{
+
+next=i;
+
+nextDate=d;
+
+break;
+
+}
+
+}
+
+if(nextDate===null){
+
+next=0;
+
+const [h,m]=modes[0].time.split(":").map(Number);
+
+nextDate=new Date();
+
+nextDate.setDate(nextDate.getDate()+1);
+
+nextDate.setHours(h,m,0,0);
+
+}
+
+document.getElementById("currentMode").textContent=modes[current].name;
+
+document.getElementById("nextMode").textContent=modes[next].name;
+
+const diff=Math.floor((nextDate-now)/1000);
+
+const hh=String(Math.floor(diff/3600)).padStart(2,"0");
+
+const mm=String(Math.floor((diff%3600)/60)).padStart(2,"0");
+
+const ss=String(diff%60).padStart(2,"0");
+
+document.getElementById("modeTimer").textContent=`${hh}:${mm}:${ss}`;
+
+}
+
+updateModes();
+
+setInterval(updateModes,1000);
+
+</script>
+<div class="glass">
+<div class="title">
+
+🏆 لیگ
+
+</div>
+<div class="league-grid">
+<div class="card league-card">
+<h3 align="center">
+
+🏆 لیگ فعلی
+
+</h3>
+<br/>
+<div class="mode">
+
+فصل جاری
+
+</div>
+<br/>
+<p align="center" style="color:#8fdfff">تا پایان لیگ</p>
+<br/>
+<div class="timer" id="leagueTimer">
+
+00:00:00
+
+</div>
+</div>
+<div class="card">
+<h3 align="center">
+
+🏅 لیگ‌ها
+
+</h3>
+<br/>
+<table class="league-table">
+<tr><td>🥉</td><td>لیگ باستانی</td></tr>
+<tr><td>⚪</td><td>لیگ کلاسیک</td></tr>
+<tr><td>🛡️</td><td>لیگ قرون وسطی</td></tr>
+<tr><td>🏛️</td><td>لیگ رنسانس</td></tr>
+<tr><td>⚙️</td><td>لیگ انقلاب صنعتی</td></tr>
+<tr><td>🏙️</td><td>لیگ عصر مدرن</td></tr>
+<tr><td>🤖</td><td>لیگ عصر سایبری</td></tr>
+<tr><td>🧬</td><td>لیگ نئو</td></tr>
+<tr><td>🌌</td><td>لیگ کهکشانی</td></tr>
+<tr><td>👑</td><td>لیگ ابدی</td></tr>
+</table>
+</div>
+</div>
+</div>
+<script>
+
+function updateLeague(){
+
+const now=new Date();
+
+let target=new Date(now);
+
+let daysUntilMonday=(1-now.getDay()+7)%7;
+
+target.setDate(now.getDate()+daysUntilMonday);
+
+target.setHours(17,0,0,0);
+
+if(target<=now){
+
+target.setDate(target.getDate()+7);
+
+}
+
+const diff=target-now;
+
+const day=Math.floor(diff/86400000);
+
+const hour=Math.floor((diff%86400000)/3600000);
+
+const minute=Math.floor((diff%3600000)/60000);
+
+const second=Math.floor((diff%60000)/1000);
+
+document.getElementById("leagueTimer").textContent=
+
+day+" روز "+
+
+String(hour).padStart(2,"0")+":"+
+
+String(minute).padStart(2,"0")+":"+
+
+String(second).padStart(2,"0");
+
+}
+
+updateLeague();
+
+setInterval(updateLeague,1000);
+
+</script>
+<div class="glass">
+<div class="title">
+
+🎯 مأموریت روزانه
+
+</div>
+<div class="grid">
+<div class="card">
+<h3 align="center">
+
+⏳ پایان مأموریت
+
+</h3>
+<br/>
+<div class="timer" id="dailyTimer">
+
+00:00:00
+
+</div>
+<br/><br/>
+<h3 align="center">
+
+🎁 پاداش
+
+</h3>
+<br/>
+<div align="center">
+
+💎 ۱ یاقوت
+
+<br/><br/>
+
+📦 ۱ صندوق تانک
+
+</div>
+</div>
+<div class="card">
+<h3 align="center">
+
+🀄 کارتیچ احتمالی
+
+</h3>
+</div>
+</div>
+</div>
+<script>
+
+function updateDaily(){
+
+const now=new Date();
+
+let target=new Date(now);
+
+target.setHours(3,0,0,0);
+
+if(now>=target){
+
+target.setDate(target.getDate()+1);
+
+}
+
+const diff=target-now;
+
+const hour=Math.floor(diff/3600000);
+
+const minute=Math.floor((diff%3600000)/60000);
+
+const second=Math.floor((diff%60000)/1000);
+
+document.getElementById("dailyTimer").textContent=
+
+String(hour).padStart(2,"0")+":"+
+
+String(minute).padStart(2,"0")+":"+
+
+String(second).padStart(2,"0");
+
+}
+
+updateDaily();
+
+setInterval(updateDaily,1000);
+
+</script>
+<div class="glass">
+<div class="title">
+
+📰 آخرین اخبار
+
+</div>
+<div class="card">
+<div class="news">
+
+📢 نسخه 1.0.4 منتشر شد!
+
+<br/><br/>
+
+🔧 رفع برخی مشکلات گردان (اتحاد)
+
+<br/><br/>
+
+✨ اضافه شدن پیشنهاد شگفت‌انگیزهای جدید
+
+<br/><br/>
+
+📦 حجم دانلود فقط ۳ مگابایت
+
+<br/><br/>
+
+📅 بروزرسانی: ۷ تیر ۱۴۰۵
+
+</div>
+</div>
+</div>
+<div class="glass">
+<div class="title">
+
+🌌 درباره اخبار متاتانک
+
+</div>
+<div align="center">
+
+🚀 مرجع فارسی اخبار بازی متاتانک
+
+<br/><br/>
+
+📰 آخرین اخبار، گیم‌مودها، لیگ‌ها و مأموریت‌های روزانه
+
+<br/><br/>
+
+💙 طراحی شده توسط سام
+
+<br/><br/>
+
+نسخه V4.3
+
+</div>
+</div>
+</div>
+<footer style="text-align:center;padding:20px;color:#8fdfff;">
+
+© 2026 MetaTank News
+
+
+<div class="glass"><div class="title">🤖 MetaBot 3.8</div><div align="center">
+<p>✅ اطلاعات تانک‌ها</p>
+<p>✅ اطلاعات سلاح‌ها</p>
+<p>✅ یاقوت و سکه</p>
+<p>✅ صندوق‌ها و بتل‌پس</p>
+<p>✅ گردان و لیگ</p>
+</div></div>
+
+</footer>
+<script>
+
+const canvas=document.getElementById("space");
+
+const ctx=canvas.getContext("2d");
+
+function resize(){
+
+canvas.width=window.innerWidth;
+
+canvas.height=window.innerHeight;
+
+}
+
+resize();
+
+window.addEventListener("resize",resize);
+
+const stars=[];
+
+for(let i=0;i<120;i++){
+
+stars.push({
+
+x:Math.random()*canvas.width,
+
+y:Math.random()*canvas.height,
+
+r:Math.random()*2,
+
+a:Math.random(),
+
+s:0.01+Math.random()*0.02
+
+});
+
+}
+
+const meteors=[];
+
+function addMeteor(){
+
+meteors.push({
+
+x:Math.random()*canvas.width,
+
+y:-50,
+
+vx:-5-Math.random()*4,
+
+vy:5+Math.random()*4,
+
+l:100
+
+});
+
+}
+
+setInterval(addMeteor,3500);
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+for(const st of stars){
+
+st.a+=st.s;
+
+if(st.a>1||st.a<0){
+
+st.s=-st.s;
+
+}
+
+ctx.fillStyle="rgba(255,255,255,"+st.a+")";
+
+ctx.beginPath();
+
+ctx.arc(st.x,st.y,st.r,0,Math.PI*2);
+
+ctx.fill();
+
+}
+
+for(let i=meteors.length-1;i>=0;i--){
+
+const m=meteors[i];
+
+ctx.strokeStyle="#7cefff";
+
+ctx.lineWidth=2;
+
+ctx.beginPath();
+
+ctx.moveTo(m.x,m.y);
+
+ctx.lineTo(m.x+m.l,m.y-m.l);
+
+ctx.stroke();
+
+m.x+=m.vx;
+
+m.y+=m.vy;
+
+if(m.y>canvas.height+100){
+
+meteors.splice(i,1);
+
+}
+
+}
+
+requestAnimationFrame(draw);
+
+}
+
+draw();
+
+</script>
+<script>
+
+const cards=document.querySelectorAll(".glass");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.animate([
+
+{
+
+opacity:0,
+
+transform:"translateY(40px)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"translateY(0)"
+
+}
+
+],{
+
+duration:700,
+
+fill:"forwards"
+
+});
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+observer.observe(card);
+
+});
+
+setInterval(()=>{
+
+document.querySelector(".header").animate([
+
+{
+
+boxShadow:"0 0 35px rgba(0,180,255,.20)"
+
+},
+
+{
+
+boxShadow:"0 0 60px rgba(0,255,255,.45)"
+
+},
+
+{
+
+boxShadow:"0 0 35px rgba(0,180,255,.20)"
+
+}
+
+],{
+
+duration:2500
+
+});
+
+},2500);
+
+</script>
+<button id="metaBotBtn">🤖</button>
+<div id="metaBotBox">
+<b>🤖 MetaBot v4.3</b><div id="botQuick"><button onclick="botInput.value='متا مپ';botInput.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter'}))">متا مپ</button><button onclick="botInput.value='گردان';botInput.dispatchEvent(new KeyboardEvent('keydown',{key:'Enter'}))">گردان</button></div>
+<div id="botMessages">سلام! من MetaBot هستم.<button onclick="botInput.value='بهترین تانک';botInput.onkeydown({key:'Enter',target:botInput})">🏆 بهترین تانک</button><button onclick="botInput.value='راهنما';botInput.onkeydown({key:'Enter',target:botInput})">📘 راهنما</button></div>
+<input id="botInput" placeholder="سوالت را بنویس و Enter بزن"/>
+</div>
+<script>
+const b=document.getElementById('metaBotBtn'),bx=document.getElementById('metaBotBox');
+b.onclick=()=>bx.style.display=bx.style.display==='block'?'none':'block';
+botInput.onkeydown=e=>{
+if(e.key!=='Enter')return;
+const q=e.target.value.trim();
+const t=q.toLowerCase();
+let a='🤖 متأسفم، هنوز جواب این سؤال را یاد نگرفتم.';
+const db=[
+{k:['سلام','درود','هی'],a:'سلام 👋 من MetaBot هستم.'},
+{k:['متا مپ','متامپ','meta map'],a:'🗺️ متا مپ حالت نبرد بین گردان‌ها (اتحادها) است و هنوز منتشر نشده است.'},
+{k:['گردان','اتحاد','اتحادیه','کلن'],a:'🏰 گردان (اتحاد) قابلیتی برای تشکیل گروه و شرکت در نبردهای گروهی است.'},
+{k:['آپدیت','اپدیت','بروزرسانی'],a:'📢 آخرین اخبار آپدیت را در بخش اخبار سایت دنبال کنید.'},
+{k:['دانلود'],a:'📥 لینک دانلود از کانال رسمی بازی در دسترس است.'},
+{k:['کانال'],a:'📢 کانال اخبار متاتانک را از صفحه اصلی سایت باز کنید.'},
+{k:['مالک','مدیر'],a:'👑 مالک سایت: سام مرادی'}
+];
+
+db.push({k:['یاقوت','جم','الماس'],a:'💎 یاقوت ارز ارزشمند بازی است.'});
+db.push({k:['تانک'],a:'🚜 هر تانک ویژگی‌های خاص خودش را دارد.'});
+db.push({k:['سلاح'],a:'💥 سلاح‌ها قدرت و برد متفاوتی دارند.'});
+db.push({k:['ربات'],a:'🤖 من MetaBot هستم؛ دستیار سایت اخبار متاتانک.'});
+
+
+db.push({k:['لیگ'],a:'🏆 لیگ هر هفته دوشنبه ساعت ۱۷ به پایان می‌رسد.'});
+db.push({k:['ماموریت','ماموریت روزانه','دیلی'],a:'🎯 مأموریت روزانه هر روز ساعت ۳ بامداد ریست می‌شود.'});
+db.push({k:['نسخه'],a:'🚀 آخرین نسخه بازی را از کانال رسمی بررسی کنید.'});
+db.push({k:['اخبار'],a:'📰 جدیدترین اخبار در صفحه اخبار سایت منتشر می‌شود.'});
+
+
+db.push({k:['بتل پس','بتل‌پس','battle pass'],a:'🎖️ بتل‌پس شامل مأموریت‌ها و جایزه‌های ویژه هر فصل است.'});
+db.push({k:['صندوق','باکس'],a:'📦 صندوق‌ها ممکن است تانک، سلاح یا آیتم‌های ارزشمند داشته باشند.'});
+db.push({k:['طلا','سکه','کوین'],a:'🪙 سکه برای خرید برخی آیتم‌های بازی استفاده می‌شود.'});
+db.push({k:['پشتیبانی','کمک'],a:'🛠️ اگر مشکلی داری از طریق کانال اخبار متاتانک با ما در ارتباط باش.'});
+db.push({k:['سایت'],a:'🌐 این سایت برای انتشار اخبار، آموزش‌ها و زمان‌بندی‌های متاتانک ساخته شده است.'});
+db.push({k:['سازنده بازی'],a:'🎮 من اطلاعات رسمی درباره سازنده بازی ندارم، اما اخبار رسمی را منتشر می‌کنم.'});
+
+
+db.push({k:['mvp','ام وی پی'],a:'⭐ MVP با عملکرد خوب در نبرد به دست می‌آید.'});
+db.push({k:['رنک','رتبه'],a:'🏅 با برد در نبردها رتبه‌ات افزایش پیدا می‌کند.'});
+db.push({k:['تنظیمات'],a:'⚙️ تنظیمات بازی از منوی اصلی در دسترس است.'});
+db.push({k:['فروشگاه','شاپ'],a:'🛒 فروشگاه شامل پیشنهادهای روزانه و آیتم‌های ویژه است.'});
+db.push({k:['کارتیچ'],a:'🀄 کارتیچ‌ها آیتم‌های ویژه‌ای هستند که در رویدادها و صندوق‌ها به دست می‌آیند.'});
+
+
+db.push({k:['رویداد','ایونت'],a:'🎉 رویدادهای ویژه برای دریافت جوایز محدود برگزار می‌شوند.'});
+db.push({k:['ماموریت هفتگی','هفتگی'],a:'📅 مأموریت‌های هفتگی جوایز بیشتری نسبت به مأموریت روزانه دارند.'});
+db.push({k:['تورنومنت','مسابقه'],a:'🏆 مسابقات در صورت اعلام رسمی در کانال اخبار متاتانک اطلاع‌رسانی می‌شوند.'});
+db.push({k:['بهترین تانک'],a:'🚜 بهترین تانک به سبک بازی و تجهیزاتت بستگی دارد.'});
+db.push({k:['بهترین سلاح'],a:'💥 هیچ سلاحی بهترین مطلق نیست؛ هرکدام کاربرد خودش را دارد.'});
+
+
+db.push({k:['دوستت دارم','عاشقتم'],a:'❤️ ممنون! خوشحالم که از سایت استفاده می‌کنی.'});
+db.push({k:['سازنده سایت'],a:'👑 سازنده و مدیر سایت: سام مرادی'});
+db.push({k:['دیسکورد'],a:'ℹ️ فعلاً سرور دیسکورد رسمی معرفی نشده است.'});
+db.push({k:['تلگرام'],a:'📢 اخبار را از کانال اخبار متاتانک دنبال کن.'});
+db.push({k:['ربات چیست'],a:'🤖 من MetaBot هستم؛ دستیار اختصاصی سایت.'});
+
+db.push({k:['چگونه بازی کنم'],a:'🎮 از آموزش‌های سایت شروع کن.'});
+db.push({k:['آوین'],a:'👶 آوین کوچولوی دوست‌داشتنی!'});
+db.push({k:['اخبار متاتانک'],a:'📰 این سایت مرجع اخبار متاتنک است.'});
+
+db.push({k:['خداحافظ','بای','فعلا'],a:'👋 خداحافظ! موفق باشی.'});
+db.push({k:['مرسی','ممنون'],a:'❤️ خواهش می‌کنم.'});
+db.push({k:['سلام متابات'],a:'🤖 سلام!'});
+
+
+db.push({k:['شوخی'],a:'😂 امیدوارم همیشه برنده باشی!'});
+db.push({k:['چه خبر'],a:'📰 آخرین خبرها را در صفحه اخبار ببین.'});
+db.push({k:['پیشنهاد'],a:'💡 پیشنهادت را برای توسعه سایت بگو.'});
+
+
+db.push({k:['هوش مصنوعی'],a:'🧠 MetaBot نسخه 4.0 با پاسخ‌های بیشتر فعال است.'});
+db.push({k:['راهنما'],a:'📘 درباره تانک، سلاح، لیگ، گردان، یاقوت، صندوق و اخبار از من بپرس.'});
+db.push({k:['بهترین تانک چیست'],a:'🏆 انتخاب بهترین تانک به سبک بازی تو بستگی دارد.'});
+
+
+db.push({k:['نقشه','مپ'],a:'🗺️ نقشه‌های بازی هر کدام استراتژی مخصوص خود را دارند.'});
+db.push({k:['قوی ترین تانک'],a:'🏆 قوی‌ترین تانک به سبک بازی بستگی دارد.'});
+db.push({k:['بتل پس چیست'],a:'🎖️ بتل‌پس با انجام مأموریت‌ها پیشرفت می‌کند.'});
+
+db.push({k:['رویداد ویژه'],a:'🎉 رویدادهای ویژه را از بخش اخبار دنبال کن.'});
+db.push({k:['ماموریت هفتگی'],a:'📅 مأموریت هفتگی جوایز بیشتری دارد.'});
+db.push({k:['گردان چیست'],a:'👥 گردان امکان همکاری گروهی بازیکنان را فراهم می‌کند.'});
+
+db.push({k:['دوئل'],a:'⚔️ دوئل برای محک زدن مهارت بازیکنان است.'});
+db.push({k:['پینگ'],a:'📶 برای پینگ بهتر از اینترنت پایدار استفاده کن.'});
+db.push({k:['تنظیم گرافیک'],a:'🎮 گرافیک را متناسب با قدرت گوشی تنظیم کن.'});
+for(const item of db){
+ if(item.k.some(x=>t.includes(x))){a=item.a;break;}
+}
+botMessages.innerHTML+='<hr><b>شما:</b> '+q+'<br><b>MetaBot:</b> '+a;
+e.target.value='';
+botMessages.scrollTop=botMessages.scrollHeight;
+};
+</script>
+</body>
+</html>
